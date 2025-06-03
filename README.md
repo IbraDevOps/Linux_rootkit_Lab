@@ -7,7 +7,7 @@ A cloud-native healthcare data management system built on Google Cloud Platform 
 
  Core Components
 
-- Flask API hosted on Compute Engine for managing patient records
+- Fast API hosted on Compute Engine for managing patient records
 - Cloud SQL for structured patient data storage
 - Cloud Storage for encrypted file uploads (PDF reports)
 - Cloud Functions for serverless event handling & logging
@@ -17,7 +17,7 @@ A cloud-native healthcare data management system built on Google Cloud Platform 
   Technologies
 
 - Google Cloud Platform (GCP)
-- Python (Flask), HTML, JavaScript
+- Python (Fast), HTML, JavaScript
 - Firebase CLI, Google Cloud SDK, MySQL
 
   Features
@@ -38,7 +38,7 @@ A cloud-native healthcare data management system built on Google Cloud Platform 
 ```
 
 /healthcare-data-system-gcp
-├── app.py               # Flask backend
+├── app.py               # Fast backend
 ├── firebase-frontend/   # Frontend files
 ├── cloud-function/      # Cloud Function code
 ├── README.md
