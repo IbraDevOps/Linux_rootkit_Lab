@@ -53,5 +53,5 @@ A cloud-native healthcare data management system built on Google Cloud Platform 
 
 **Ibrahim Sheikh**  
 Cloud Security Enthusiast | 
-[LinkedIn](https://linkedin.com/in/your-profile) • [Email](mailto:isheikh@alumni.cmu.edu)
+ [Email](mailto:isheikh@alumni.cmu.edu)
 
