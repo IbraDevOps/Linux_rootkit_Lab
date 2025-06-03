@@ -1,11 +1,7 @@
-Sure! Here's a high-level, clean and concise `README.md` version for your GitHub project:
 
----
-
-```markdown
  Secure Healthcare Data Management System on GCP
 
-  Overview
+
 
 A cloud-native healthcare data management system built on Google Cloud Platform (GCP), focused on security, scalability, and compliance. This project demonstrates secure handling of sensitive patient records using modern GCP services and best practices.
 
