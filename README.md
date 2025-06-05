@@ -1,5 +1,5 @@
 
- Secure Healthcare Data Management System on GCP
+ Secure Healthcare Data Management System on AWS
 
 
 
