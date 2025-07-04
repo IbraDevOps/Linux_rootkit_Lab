@@ -1,53 +1,69 @@
+Secure & Scalable Healthcare Data Management System on AWS
 
- Secure Healthcare Data Management System on AWS
+This project presents a cloud-native healthcare data management system built entirely on Amazon Web Services (AWS). It focuses on security, scalability, and compliance with healthcare industry standards by leveraging a modern AWS architecture.
+
+Detailed technical walkthrough and implementation steps available on Medium:
+ [Read the full blog](https://medium.com/p/d622bfebb045/)
 
 
 
-A cloud-native healthcare data management system built on Google Cloud Platform (GCP), focused on security, scalability, and compliance. This project demonstrates secure handling of sensitive patient records using modern GCP services and best practices.
+Project Overview
 
- Core Components
+This system demonstrates how to securely manage and scale sensitive patient records using AWS-native tools and best practices.
 
-- Fast API hosted on Compute Engine for managing patient records
-- Cloud SQL for structured patient data storage
-- Cloud Storage for encrypted file uploads (PDF reports)
-- Cloud Functions for serverless event handling & logging
-- Firebase Hosting for frontend delivery
-- Security & Monitoring: IAM, VPC Service Controls, Cloud Audit Logs, Monitoring Dashboards
+Architecture Highlights
 
-  Technologies
+Amazon EC2: Hosts a FastAPI backend for managing patient data
+Amazon RDS (MySQL/PostgreSQL): Secure, scalable structured data storage
+Amazon S3: Encrypted storage for patient documents and medical reports
+AWS Lambda: Serverless processing and logging for upload events
+Amazon CloudFront + S3: Static frontend delivery
+AWS IAM: Role-based access control
+CloudWatch + AWS Config: Logging, alerting, and compliance auditing
 
-- Google Cloud Platform (GCP)
-- Python (Fast), HTML, JavaScript
-- Firebase CLI, Google Cloud SDK, MySQL
 
-  Features
 
-- Role-based access control using IAM
-- Encrypted storage and secure SQL access
-- Audit logging for compliance and monitoring
-- Serverless logging of patient report uploads
+Tech Stack
 
-  Learning Goals
+Python (FastAPI) for backend APIs
+MySQL/PostgreSQL on RDS for relational storage
+HTML/CSS/JS** frontend served via S3 & CloudFront
+AWS SDK (boto3) for interacting with AWS services
 
-- Cloud security (IAM, encryption, audit logging)
-- Scalable GCP architecture
-- Secure API + frontend integration
 
-  Repo Structure (Simplified)
 
-```
+ Features
 
-/healthcare-data-system-gcp
-├── app.py               # Fast backend
-├── firebase-frontend/   # Frontend files
-├── cloud-function/      # Cloud Function code
+ Role-based user access with AWS IAM
+ Encrypted S3 storage with restricted access
+Real-time upload tracking using S3 events and Lambda
+ Secure backend with parameterized SQL queries
+ Full audit trail and monitoring with CloudWatch
+
+
+
+ Repository Structure (simplified)
+
+
+/secure-healthcare-aws
+├── app.py                # FastAPI backend
+├── requirements.txt      # Python dependencies
+├── lambda/               # AWS Lambda function code
+├── frontend/             # Static frontend (HTML/JS)
 ├── README.md
 
-```
 
-  Author
 
-Ibrahim Sheikh  
-Cloud Security Enthusiast | 
- [Email](mailto:isheikh@alumni.cmu.edu)
 
+ ⚠️ Disclaimer
+
+This is a **learning project** designed for educational and demo purposes. It is not production-ready for handling real healthcare data unless properly audited and reviewed for compliance (e.g., HIPAA).
+
+
+
+ Author
+
+Ibrahim Sheikh
+Cloud Security Enthusiast
+GitHub: [@IbraDevOps](https://github.com/IbraDevOps)
+Medium: [Read more](https://medium.com/p/d622bfebb045/)
