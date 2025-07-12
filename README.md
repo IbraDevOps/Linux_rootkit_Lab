@@ -27,7 +27,7 @@ Tech Stack
 
 Python (FastAPI) for backend APIs
 MySQL/PostgreSQL on RDS for relational storage
-HTML/CSS/JS** frontend served via S3 & CloudFront
+HTML/CSS/JS frontend served via S3 & CloudFront
 AWS SDK (boto3) for interacting with AWS services
 
 
@@ -57,7 +57,7 @@ Real-time upload tracking using S3 events and Lambda
 
  ⚠️ Disclaimer
 
-This is a **learning project** designed for educational and demo purposes. It is not production-ready for handling real healthcare data unless properly audited and reviewed for compliance (e.g., HIPAA).
+This is a learning project designed for educational and demo purposes. It is not production-ready for handling real healthcare data unless properly audited and reviewed for compliance (e.g., HIPAA).
 
 
 
