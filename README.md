@@ -1,69 +1,48 @@
-Secure & Scalable Healthcare Data Management System on AWS
+#  Build and Analyze a Custom Linux Rootkit in a Controlled Lab
 
-This project presents a cloud-native healthcare data management system built entirely on Amazon Web Services (AWS). It focuses on security, scalability, and compliance with healthcare industry standards by leveraging a modern AWS architecture.
-
-Detailed technical walkthrough and implementation steps available on Medium:
- [Read the full blog](https://medium.com/p/d622bfebb045/)
+This project explores the process of building, deploying, and detecting a simple Linux rootkit using Loadable Kernel Modules (LKMs) in a controlled, isolated lab environment. It's designed to push boundaries in kernel-level understanding, offensive security, and forensic detection.
 
 
 
-Project Overview
-
-This system demonstrates how to securely manage and scale sensitive patient records using AWS-native tools and best practices.
-
-Architecture Highlights
-
-Amazon EC2: Hosts a FastAPI backend for managing patient data
-Amazon RDS (MySQL/PostgreSQL): Secure, scalable structured data storage
-Amazon S3: Encrypted storage for patient documents and medical reports
-AWS Lambda: Serverless processing and logging for upload events
-Amazon CloudFront + S3: Static frontend delivery
-AWS IAM: Role-based access control
-CloudWatch + AWS Config: Logging, alerting, and compliance auditing
+ Full Walkthrough (with screenshots and step-by-step guide) is published on Medium:  
+ [Read it here](https://medium.com/@yourusername/build-and-analyze-a-custom-linux-rootkit-in-a-controlled-lab-<article-slug>)  
 
 
 
-Tech Stack
 
-Python (FastAPI) for backend APIs
-MySQL/PostgreSQL on RDS for relational storage
-HTML/CSS/JS frontend served via S3 & CloudFront
-AWS SDK (boto3) for interacting with AWS services
+ Project Goals
 
+- Write a Loadable Kernel Module (LKM) that hides processes, files, and network ports.
+- Simulate its deployment in a vulnerable Linux virtual machine.
+- Detect and analyze its behavior using real-world forensic and monitoring tools.
+- Document both offensive techniques and defensive detection strategies.
 
+---
 
- Features
+ Lab Setup
 
- Role-based user access with AWS IAM
- Encrypted S3 storage with restricted access
-Real-time upload tracking using S3 events and Lambda
- Secure backend with parameterized SQL queries
- Full audit trail and monitoring with CloudWatch
-
-
-
- Repository Structure (simplified)
-
-
-/secure-healthcare-aws
-├── app.py                # FastAPI backend
-├── requirements.txt      # Python dependencies
-├── lambda/               # AWS Lambda function code
-├── frontend/             # Static frontend (HTML/JS)
-├── README.md
+- Target VM: Ubuntu 18.04 / 20.04 (64-bit)
+- Attacker/Monitor VM: Kali Linux
+- Tools Used:
+  - `gcc`, `insmod`, `rmmod`, `lsmod`, `dmesg`
+  - `ps`, `top`, `netstat`, `lsof`, `/proc`
+  - `chkrootkit`, `rkhunter`, `Volatility`, `Syscall diffing`
 
 
 
 
  ⚠️ Disclaimer
 
-This is a learning project designed for educational and demo purposes. It is not production-ready for handling real healthcare data unless properly audited and reviewed for compliance (e.g., HIPAA).
+This project is **for educational use only**. Do **NOT** deploy or test this code outside of an isolated lab environment. Misuse of rootkits in production or public environments may be illegal and unethical.
+
+---
+
+Author
+
+Ibrahim Sheikh  
+Cloud Security & Offensive Security Enthusiast  
+ GitHub: [@IbraDevOps](https://github.com/IbraDevOps)  
+ Medium: [@isheikh_24798](https://medium.com/@isheikh_24798)
 
 
 
- Author
-
-Ibrahim Sheikh
-Cloud Security Enthusiast
-GitHub: [@IbraDevOps](https://github.com/IbraDevOps)
-Medium: [Read more](https://medium.com/p/d622bfebb045/)
