@@ -33,7 +33,7 @@ This project explores the process of building, deploying, and detecting a simple
 
  ⚠️ Disclaimer
 
-This project is **for educational use only**. Do **NOT** deploy or test this code outside of an isolated lab environment. Misuse of rootkits in production or public environments may be illegal and unethical.
+This project is for educational use only. Do NOT deploy or test this code outside of an isolated lab environment. Misuse of rootkits in production or public environments may be illegal and unethical.
 
 ---
 
