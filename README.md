@@ -1,4 +1,5 @@
 Project Overview
+
 This project explores hands-on malware analysis and reverse engineering techniques using a fully Linux-based lab. It includes static analysis with tools like Ghidra, dynamic execution monitoring via `strace`, and custom rule creation with YARA. Optional components extend to Android malware and packed ELF binaries.
 
 
