@@ -1,48 +1,78 @@
-#  Build and Analyze a Custom Linux Rootkit in a Controlled Lab
-
-This project explores the process of building, deploying, and detecting a simple Linux rootkit using Loadable Kernel Modules (LKMs) in a controlled, isolated lab environment. It's designed to push boundaries in kernel-level understanding, offensive security, and forensic detection.
-
-
-
- Full Walkthrough (with screenshots and step-by-step guide) is published on Medium:  
- [Read it here](https://medium.com/@yourusername/build-and-analyze-a-custom-linux-rootkit-in-a-controlled-lab-<article-slug>)  
+Project Overview
+This project explores hands-on malware analysis and reverse engineering techniques using a fully Linux-based lab. It includes static analysis with tools like Ghidra, dynamic execution monitoring via `strace`, and custom rule creation with YARA. Optional components extend to Android malware and packed ELF binaries.
 
 
 
+ Lab Environment
 
- Project Goals
+| Component | Purpose                  | OS       | Tools |
+|----------|--------------------------|----------|-------|
+| Kali     | Reverse engineering lab  | Kali     | Ghidra, Cutter, strace, ltrace, YARA, ClamAV |
+| Ubuntu   | Log server + monitoring  | Ubuntu 24| Suricata, tcpdump, Wireshark               |
 
-- Write a Loadable Kernel Module (LKM) that hides processes, files, and network ports.
-- Simulate its deployment in a vulnerable Linux virtual machine.
-- Detect and analyze its behavior using real-world forensic and monitoring tools.
-- Document both offensive techniques and defensive detection strategies.
+ Network Setup
+- Isolated NAT or Host-Only Network**
+- No Internet inside Kali VM (for safety)
+- Snapshots enabled for VM rollback
+
+
+Analysis Workflow
+
+ Phase 1: Static Analysis
+- Hash file (SHA256)
+- Analyze with `strings`, `file`, `readelf`
+- Load in Ghidra or Cutter
+- Identify suspicious sections/functions
+
+ Phase 2: Dynamic Behavior
+- Monitor syscalls with `strace`, `ltrace`
+- Network logs via `tcpdump`, `Wireshark`
+- Check persistence mechanisms (e.g., crontab, .bashrc, systemd)
+
+ Phase 3: Detection Rules
+- Write YARA rule based on static features
+- Scan sample set
+- Test on variants
+
+ Phase 4: Reverse Packed ELF
+- Use UPX to pack a benign binary
+- Unpack and reverse with Binwalk + Ghidra
+
+ Bonus Phase: Android Reversing
+- Tools: `apktool`, `jadx-gui`, `mobSF`
+- Reverse permissions, smali code, manifest
+
+
+
+ Tools Used
+- Ghidra, Cutter (Radare2)
+- strace, ltrace
+- Wireshark, tcpdump, Suricata
+- YARA, ClamAV
+- apktool, jadx, MobSF (optional)
+- UPX, Binwalk, Firmware-Mod-Kit (optional)
 
 ---
 
- Lab Setup
-
-- Target VM: Ubuntu 18.04 / 20.04 (64-bit)
-- Attacker/Monitor VM: Kali Linux
-- Tools Used:
-  - `gcc`, `insmod`, `rmmod`, `lsmod`, `dmesg`
-  - `ps`, `top`, `netstat`, `lsof`, `/proc`
-  - `chkrootkit`, `rkhunter`, `Volatility`, `Syscall diffing`
+ Documentation
+All analysis steps, findings, screenshots, and detection rules are documented in Medium blog series.
 
 
 
+ Future Work
+- Integrate Cuckoo Sandbox for full automation
+- Add memory forensics using Volatility
+- Try reversing IoT firmware
 
- ⚠️ Disclaimer
 
-This project is for educational use only. Do NOT deploy or test this code outside of an isolated lab environment. Misuse of rootkits in production or public environments may be illegal and unethical.
+
+## 🔐 Disclaimer
+This lab is for educational purposes **only**. Do not execute malware outside of an isolated environment.
 
 ---
 
 Author
-
-Ibrahim Sheikh  
-Cloud Security & Offensive Security Enthusiast  
- GitHub: [@IbraDevOps](https://github.com/IbraDevOps)  
- Medium: [@isheikh_24798](https://medium.com/@isheikh_24798)
-
+**Ibrahim Sheikh**  
+[Medium](https://medium.com/@isheikh_24798) | [GitHub](https://github.com/IbraDevOps)
 
 
